@@ -8,6 +8,7 @@ exports.put = function(_web, _config)
 	var resourceName = config.resourceName||_web.getResourceName();
 	var id = config.id||_web.getId();
 	var resource = config.resource||{};
+	var context = config.context || undefined;
 	var errors;
 	var serializeResource = config.resourceSerializer||JSON.stringify;
 	var serializeError = config.errorSerializer||JSON.stringify;
